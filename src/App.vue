@@ -1,16 +1,10 @@
 <template>
   <div>
 
- 
-    
     {{name}}
-    <br>
-    {{job}}
-
-    <br>
 
 
-    <Header />
+    <Header :myName="name" />
     <Footer />
   </div>
 </template>
@@ -23,8 +17,7 @@ export default {
   
   data(){
     return {
-      name: "Kawsar Ahmed",
-      job: "Learning Web Development"
+      name: 25,
     }
   },
   components: {
