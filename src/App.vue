@@ -10,7 +10,7 @@
     <br>
 
 
-       <Header />
+    <Header />
     <Footer />
   </div>
 </template>
@@ -34,6 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   
+
 </style>
