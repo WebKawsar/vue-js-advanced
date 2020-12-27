@@ -4,25 +4,23 @@
         <br>
 
 
-        <p>{{firstName}}</p>
-        <p>{{lastName}}</p>
-        <p>{{age}}</p>
-
+        <p>Firstname : {{firstName}}</p>
+        
         <button @click="updateName">Update yor name</button>
     </div>
 </template>
 
 <script>
+
+import { bus } from "../../main";
+
 export default {
     props: {
         firstName: String,
-        lastName: String,
-        age: Number
     },
     methods: {
         updateName(){
-            // this.firstName = "Abdullah"
-            this.$emit("updateName", "Abdullah");
+            bus.$emit("changeName", "Ahmed changed to Mohammad")
         }
     }
 }

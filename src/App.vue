@@ -4,12 +4,14 @@
     <Header 
     
     :firstName="fname"
-    :lastName="lname"
-    :age="age"
-    @updateName="fname = $event"
-    
+
      />
-    <Footer />
+    <Footer
+    
+    :lastName="lname"
+  
+
+     />
   </div>
 </template>
 
@@ -23,7 +25,6 @@ export default {
     return {
       fname: "Kawsar",
       lname: "Ahmed",
-      age: 25,
     }
   },
   components: {
