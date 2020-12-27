@@ -1,7 +1,14 @@
 <template>
   <div>
 
-    <Header :myStudents="students" />
+    <Header 
+    
+    :firstName="fname"
+    :lastName="lname"
+    :age="age"
+    @updateName="fname = $event"
+    
+     />
     <Footer />
   </div>
 </template>
@@ -14,7 +21,9 @@ export default {
   
   data(){
     return {
-      students: ["Kawsar", "Shamim", "Imran"]
+      fname: "Kawsar",
+      lname: "Ahmed",
+      age: 25,
     }
   },
   components: {

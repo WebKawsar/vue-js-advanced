@@ -2,18 +2,27 @@
     <div>
         Header
         <br>
-        <ul>
-            <li v-for="student in myStudents" :key="student">{{student}}</li>
-        </ul>
+
+
+        <p>{{firstName}}</p>
+        <p>{{lastName}}</p>
+        <p>{{age}}</p>
+
+        <button @click="updateName">Update yor name</button>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        myStudents: {
-            type: Array,
-            required: true
+        firstName: String,
+        lastName: String,
+        age: Number
+    },
+    methods: {
+        updateName(){
+            // this.firstName = "Abdullah"
+            this.$emit("updateName", "Abdullah");
         }
     }
 }
