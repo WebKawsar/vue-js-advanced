@@ -2,15 +2,17 @@
     <div>
         Header
         <br>
-        <p>{{myName}}</p>
+        <ul>
+            <li v-for="student in myStudents" :key="student">{{student}}</li>
+        </ul>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        myName: {
-            type: String,
+        myStudents: {
+            type: Array,
             required: true
         }
     }

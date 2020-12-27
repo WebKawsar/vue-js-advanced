@@ -1,10 +1,7 @@
 <template>
   <div>
 
-    {{name}}
-
-
-    <Header :myName="name" />
+    <Header :myStudents="students" />
     <Footer />
   </div>
 </template>
@@ -17,7 +14,7 @@ export default {
   
   data(){
     return {
-      name: 25,
+      students: ["Kawsar", "Shamim", "Imran"]
     }
   },
   components: {
