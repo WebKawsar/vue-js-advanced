@@ -1,35 +1,31 @@
 <template>
   <div>
 
-    <Header 
-    
-    :firstName="fname"
+    <compHelper>
 
-     />
-    <Footer
-    
-    :lastName="lname"
-  
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      
+    </compHelper>
 
-     />
   </div>
 </template>
 
 <script>
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
+import compHelper from "./Components/ListHelper/ListHelper";
 
 export default {
   
   data(){
     return {
-      fname: "Kawsar",
-      lname: "Ahmed",
+      
     }
   },
   components: {
-    Header,
-    Footer
+    compHelper
   }
 }
 </script>
