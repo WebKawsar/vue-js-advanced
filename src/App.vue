@@ -3,12 +3,13 @@
 
     <compHelper>
 
-      <ul>
+      <ul slot="listItem">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
       </ul>
-      
+      <p slot="para">Paragraph</p>
+      <p :slot="loader">Paragraph</p>
     </compHelper>
 
   </div>
@@ -21,11 +22,16 @@ export default {
   
   data(){
     return {
-      
+      loader: ""
     }
   },
   components: {
     compHelper
+  },
+  created(){
+    setTimeout(() => {
+      this.loader = "other";
+    }, 3000)
   }
 }
 </script>
